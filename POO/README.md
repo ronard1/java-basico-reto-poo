@@ -8,39 +8,38 @@ En éste desafío, se va mostrar la herencia múltiple en java utilizando interf
 [Lançamento iPhone 2007](https://www.youtube.com/watch?v=9ou608QQRq8)
 - Minutos relevantes: 00:15 hasta 00:55
 
+```mermaid
+classDiagram
+    class IReprodutorMusical {
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+    }
 
-    classDiagram
+    class IAparelhoTelefonico {
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+    }
 
-        class IReprodutorMusical {
-            +tocar()
-            +pausar()
-            +selecionarMusica(String musica)
-        }
-    
-        class IAparelhoTelefonico {
-            +ligar(String numero)
-            +atender()
-            +iniciarCorreioVoz()
-        }
-    
-        class INavegadorInternet {
-            +exibirPagina(String url)
-            +adicionarNovaAba()
-            +atualizarPagina()
-        }
-    
-        class iPhone {
-            +tocar()
-            +pausar()
-            +selecionarMusica(String musica)
-            +ligar(String numero)
-            +atender()
-            +iniciarCorreioVoz()
-            +exibirPagina(String url)
-            +adicionarNovaAba()
-            +atualizarPagina()
-        }
-    
-        IReprodutorMusical <|.. iPhone
-        IAparelhoTelefonico <|.. iPhone
-        INavegadorInternet <|.. iPhone
+    class INavegadorInternet {
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    class iPhone {
+        +tocar()
+        +pausar()
+        +selecionarMusica(String musica)
+        +ligar(String numero)
+        +atender()
+        +iniciarCorreioVoz()
+        +exibirPagina(String url)
+        +adicionarNovaAba()
+        +atualizarPagina()
+    }
+
+    IReprodutorMusical <|.. iPhone
+    IAparelhoTelefonico <|.. iPhone
+    INavegadorInternet <|.. iPhone
